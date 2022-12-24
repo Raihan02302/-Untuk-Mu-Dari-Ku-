@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: sans-serif;
+    background-image: url(vd/bg.gif);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+/* Book */
+.book {
+    position: relative;
+    width: 350px;
+    height: 500px;
+    transition: transform 0.5s;
+}
+
+.paper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    perspective: 1500px;
+
+}
+
+.front,
+.back {
+    background-color: white;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform-origin: left;
+    transition: transform 0.5s;
+}
+
+.front {
+    z-index: 1;
+    backface-visibility: hidden;
+    border-left: 3px solid powderblue;
+}
+
+.back {
+    z-index: 0;
+}
+
+.front-content,
+.back-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.back-content {
+    transform: rotateY(180deg)
+}
+
+/* Paper flip effect */
+.flipped .front,
+.flipped .back {
+    transform: rotateY(-180deg);
+}
+
+/* Controller Buttons */
+button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    margin: 10px;
+    transition: transform 0.5s;
+}
+
+button:focus {
+    outline: none;
+}
+
+button:hover i {
+    color: #636363;
+}
+
+i {
+    font-size: 50px;
+    color: gray;
+}
+
+/* Paper stack order */
+#p1 {
+    z-index: 3;
+}
+
+#p2 {
+    z-index: 2;
+}
+
+#p3 {
+    z-index: 1;
+}
+.gambar1{
+    position: absolute;
+    justify-content: center;
+    width: 79%;
+    height: 80%;
+}
+.tulisan1{
+    position: absolute;
+    font-size: 130%;
+    top: 2%;
+    left: 17%;
+}
+.tulisan2{
+    position: absolute;
+    font-size: 130%;
+    top: 2%;
+}
+.tulisan3{
+    position: absolute;
+    font-size: 70%;
+    left: 3%;
+    top: 9%;
+}
+.paragraf1{
+    position: absolute;
+    left: 3%;
+    font-size: 70%;
+    top: 16%;
+}
+.paragraf2{
+    position: absolute;
+    left: 3%;
+    font-size: 70%;
+    top: 30%;
+}
+.paragraf3{
+    position: absolute;
+    left: 3%;
+    font-size: 70%;
+    top: 50%;
+}
+.memotext{
+    position: absolute;
+    font-size: 70%;
+    top: 9%;
+}
+.memotext2{
+    position: absolute;
+    top: 60%;
+}
+.penutup{
+    position: absolute;
+    font-size: 90%;
+}
+.tulisan10{
+    position: absolute;
+    font-size: 100%;
+    top: 93%;
+    left: 13%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
